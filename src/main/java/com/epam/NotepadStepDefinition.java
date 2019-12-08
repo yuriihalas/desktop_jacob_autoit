@@ -7,7 +7,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-public class MyStepDefs {
+public class NotepadStepDefinition {
     private NotepadInteraction notepad = new NotepadInteraction();
     private WindowsInteraction windows = new WindowsInteraction();
 

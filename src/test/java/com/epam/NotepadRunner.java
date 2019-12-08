@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/notepad.feature",
-        glue = {"src/main/java/com/epam/MyStepDefs"
+        glue = {"src/main/java/com/epam/NotepadStepDefinition"
         })
 public class NotepadRunner {
 }
