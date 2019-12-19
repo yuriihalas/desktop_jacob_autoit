@@ -10,6 +10,5 @@ public class WindowsInteraction extends AbstractInteraction {
         autoItX.controlClick(SEARCH_IN_WINDOWS_BASIC_WINDOW_INFO, "", SEARCH_IN_WINDOWS_CLASSNAME_NN);
         autoItX.send(something);
         autoItX.send(ENTER, false);
-        autoItX.send(ENTER, false);
     }
 }

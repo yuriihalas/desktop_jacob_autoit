@@ -2,6 +2,7 @@ Feature: As I am a user, I write some notes,
   and I want to be sure that notepad saved correctly
   my notes
 
+  @smoke-tests
   Scenario Outline: create txt file with some message
     When I open notepad
     And I write "<message>" to notepad

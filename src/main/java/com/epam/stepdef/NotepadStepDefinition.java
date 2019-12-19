@@ -1,7 +1,8 @@
-package com.epam;
+package com.epam.stepdef;
 
-import com.epam.desktop.NotepadInteraction;
 import com.epam.desktop.WindowsInteraction;
+import com.epam.desktop.NotepadInteraction;
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -50,6 +51,12 @@ public class NotepadStepDefinition {
 
     @Then("^text in notepad must to be \"([^\"]*)\"$")
     public void textInNotepadMustToBe(String message) {
+        notepad.waitUntilNotepadNotActivated();
         Assert.assertEquals(notepad.getNotepadText(), message);
+    }
+
+    @After
+    public void closeNotepad() {
+        notepad.closeNotepad();
     }
 }

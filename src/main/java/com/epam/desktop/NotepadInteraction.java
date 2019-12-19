@@ -1,8 +1,7 @@
 package com.epam.desktop;
 
 import autoitx4java.AutoItX;
-
-import static com.epam.utils.DesktopKeys.*;
+import com.epam.utils.DesktopKeys;
 
 public class NotepadInteraction extends AbstractInteraction {
     private static final String DEFAULT_NOTEPAD_LOCATION = "C:/Windows/System32/notepad.exe";
@@ -31,10 +30,10 @@ public class NotepadInteraction extends AbstractInteraction {
     }
 
     public void saveChanges() {
-        autoItX.controlSend(SAVE_AS_BASIC_WINDOW_INFO, "", SAVE_AS_EDIT_FILENAME_CLASSNAME_NN, ENTER);
+        autoItX.controlSend(SAVE_AS_BASIC_WINDOW_INFO, "", SAVE_AS_EDIT_FILENAME_CLASSNAME_NN, DesktopKeys.ENTER);
         if (autoItX.winExists(SAVE_AS_BASIC_WINDOW_INFO)) {
-            autoItX.send(LEFT_ARROW, false);
-            autoItX.send(ENTER, false);
+            autoItX.send(DesktopKeys.LEFT_ARROW, false);
+            autoItX.send(DesktopKeys.ENTER, false);
         }
     }
 
@@ -44,7 +43,7 @@ public class NotepadInteraction extends AbstractInteraction {
     }
 
     public void openSaveAsWindow() {
-        autoItX.controlSend(NOTEPAD_BASIC_WINDOW_INFO, "", "", CTRL_PLUS_S);
+        autoItX.controlSend(NOTEPAD_BASIC_WINDOW_INFO, "", "", DesktopKeys.CTRL_PLUS_S);
         autoItX.winWait(SAVE_AS_BASIC_WINDOW_INFO);
     }
 
